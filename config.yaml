@@ -1,0 +1,24 @@
+openai_tool:
+  tool1:
+    messages:
+      - role: "system"
+        content: "Categorize the task into one of the following: Work, Personal, Errand, Study, Health, Other."
+      - role: "user"
+        content: |
+          Task Title: {title}
+          Description: {description}
+    model: "gpt-4o-mini"
+    temperature: 0.6
+    max_tokens: 40
+
+  tool2:
+    messages:
+      - role: "system"
+        content: "Summarize the task."
+      - role: "user"
+        content: |
+          Task Title: {title}
+          Description: {description}
+    model: "gpt-4o-mini"
+    temperature: 1.0
+    max_tokens: 100
